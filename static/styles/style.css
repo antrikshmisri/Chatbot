@@ -1,0 +1,70 @@
+body
+{
+	/*background: #A84136;*/
+	/*#f05842*/
+	background: linear-gradient(to bottom right, #db344a , #ed7f40);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	background-attachment: fixed;
+	margin: 0;
+
+}
+
+#heading
+{
+	color: #BFFF00;
+	font-family: 'Satisfy', cursive;
+	font-weight: bold;
+	font-size: 260%;
+	text-align: center;
+	transform: translateX(-2%);
+}
+
+#textInput
+{
+	border: 3px solid #111111;
+	font-family: 'Pacifico' , cursive;
+}
+
+#buttonInput
+{
+	border: 3px solid #111111;
+	font-family: 'Pacifico' , cursive;
+}
+
+#chatbox
+{
+	background-color: #BFFF00;
+	text-align: left;
+	transform: translateX(-10%);
+	border: 5px solid #111111;
+	margin-left: 500px;
+	margin-right:500px;
+}
+.botText
+{
+	font-family: 'Satisfy', cursive;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 15px;
+	transform: translateX(-2%);
+	font-size: x-large;
+}
+#userInput
+{
+	text-align: center;
+	transform: translateX(-4%);
+	margin-top: 100px;
+	height: auto;
+	width: auto;
+}
+.userText
+{
+    font-family: 'Satisfy', cursive;
+	font-weight: bold;
+	text-align: right;
+	background-color: #BFFF00;
+	margin-right: 15px;
+	font-size: x-large;
+}

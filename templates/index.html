@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ciara-Bot</title>
+	<link rel="stylesheet" type="text/css" href="/static/styles/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id = "heading"><h1 ><font>Ciara Bot</font></h1></div>
+	<div id = "chatbox">
+		<div class="botText"><span>Hi! I'm Ciara Bot</span></div>
+	</div>
+	<div id = "userInput">
+		<form>
+		<input id = "textInput" type="text" name = "msg" placeholder="Question?" required>
+		<input id = "buttonInput" type="submit" value="Send">
+		</form>
+	</div>
+
+	<script>
+		function getBotResponse() {
+          var rawText = $("#textInput").val();
+          var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          $.get("/get", { msg: rawText }).done(function(data) {
+            var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          });
+        }
+        $("#textInput").keypress(function(e) {
+            if ((e.which == 13) && document.getElementById("textInput").value != "" ){
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function() {
+            if (document.getElementById("textInput").value != "") {
+                getBotResponse();
+            }
+        })
+
+	</script>
+</body>
+</html>
