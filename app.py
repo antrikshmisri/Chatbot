@@ -1,16 +1,23 @@
 from flask import Flask, render_template, request
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
-from chatterbot.response_selection import get_first_response
-from chatterbot.comparisons import levenshtein_distance
+
 
 app = Flask(__name__)
 
-english_bot = ChatBot("Ciara Bot", storage_adapter="chatterbot.storage.SQLStorageAdapter", preprocessors=['chatterbot.preprocessors.clean_whitespace'],logic_adapters=["chatterbot.logic.BestMatch", "chatterbot.logic.MathematicalEvaluation"],trainer='chatterbot.trainers.ListTrainer',read_only=True)
+english_bot = ChatBot("Ciara Bot", storage_adapter="chatterbot.storage.SQLStorageAdapter", preprocessors=['chatterbot.preprocessors.clean_whitespace'],
+            logic_adapters=[{
+            'import_path': 'chatterbot.logic.BestMatch',
+            'default_response': 'i honestly have no idea how to respond to that',
+            'maximum_similarity_threshold': 0.8
+             },
+             "chatterbot.logic.MathematicalEvaluation"],
+             trainer='chatterbot.corpus.english')
 trainer = ChatterBotCorpusTrainer(english_bot)
 trainer.train("chatterbot.corpus.english")
-trainer.train("C:/Users/antri/PycharmProjects/flask-chatbot/dataset.json")
+print("training with intents.json\n")
+trainer.train("./intents.json")
+##trainer.export_for_training('./my_export.json')
 
 @app.route("/")
 def home():
