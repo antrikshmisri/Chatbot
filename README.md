@@ -6,4 +6,4 @@ Ciara is a python based chatbot trained to respond to mathematical queries , spo
 http://ciara-chatbot.herokuapp.com/
 
 ![image1](https://github.com/antrikshmisri/Ciara-Chatbot/blob/master/screenshots/ss_01.png)
-![image2](https://github.com/antrikshmisri/Ciara-Chatbot/blob/master/screenshots/ss_02.png)
+![image1](![image1](https://github.com/antrikshmisri/Ciara-Chatbot/blob/master/screenshots/ss_01.png))
