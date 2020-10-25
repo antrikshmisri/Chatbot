@@ -39,15 +39,15 @@ body
 	text-align: left;
 	transform: translateX(-10%);
 	border: 5px solid #111111;
-	margin-left: 500px;
-	margin-right:500px;
+	/* margin-left: 500px;
+	margin-right:500px; */
 }
 .botText
 {
 	font-family: 'Satisfy', cursive;
 	font-weight: bold;
 	text-align: left;
-	margin-left: 15px;
+	/* margin-left: 15px; */
 	transform: translateX(-2%);
 	font-size: x-large;
 }
