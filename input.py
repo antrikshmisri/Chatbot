@@ -1,9 +1,12 @@
 import nltk
 from nltk.stem.porter import PorterStemmer
-nltk.download('punkt')
+
+def downloadData():
+    nltk.download('punkt')
+    nltk.download('corpora')
 
 def tokenize(sentence):
-    return nltk.tokenize(sentence)
+    return nltk.word_tokenize(sentence)
 
 
 stemmer = PorterStemmer()
