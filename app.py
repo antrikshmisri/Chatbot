@@ -3,18 +3,18 @@ from chatterbot import ChatBot
 
 import chatterbot
 import nltk.corpus
-from nltk.corpus import brown
+import os
 
 import input as nlplib
 import train
-import os
-import json
+import reset
+
 
 
 
 app = Flask(__name__)
 
-if(os.listdir(nltk.data.find("corpora")) == False):
+if(not os.listdir(nltk.data.find("corpora"))):
     print('data not found , downloading resources...')
     nlplib.downloadData()
 
@@ -22,10 +22,9 @@ ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageA
             logic_adapters=[{
             'import_path': 'chatterbot.logic.BestMatch',
             'default_response': 'i honestly have no idea how to respond to that',
-            'maximum_similarity_threshold': 0.6
+            'maximum_similarity_threshold': 0.8
              },
-             "chatterbot.logic.MathematicalEvaluation",
-            'chatterbot.logic.TimeLogicAdapter'])
+             "chatterbot.logic.MathematicalEvaluation"])
 
 train.trainbot(ciara_bot,10)
 

@@ -20,12 +20,10 @@ def inputdata():
         for pattern,response in zip(intent['patterns'] , intent['responses']):
             q = input.tokenize(pattern)
             a = input.tokenize(response)
-            for idx,word in enumerate(q):
-                q[idx] = input.stem(word)
+            for word in q:
                 if word in ignore_words:
                     q.remove(word)
-            for idx,word in enumerate(a):
-                a[idx] = input.stem(word)
+            for word in a:
                 if word in ignore_words:
                     a.remove(word)
             statements.append(ToString(q))
