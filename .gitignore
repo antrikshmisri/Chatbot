@@ -1,1 +1,4 @@
 venv/
+dataset1.json
+db.sqlite3
+
