@@ -26,8 +26,6 @@ def inputdata():
             q = input.tokenize(pattern)
             print(answerindex)
             a = input.tokenize(intent['responses'][answerindex])
-            print(q)
-            print(a)
             for word in q:
                 if word in ignore_words:
                     q.remove(word)
@@ -37,7 +35,7 @@ def inputdata():
             statements.append(ToString(q))
             statements.append(ToString(a))
     return statements
-print(inputdata())
+
 #hyperparameters
 iter = 10
 def trainbot(chatbot,iter):
