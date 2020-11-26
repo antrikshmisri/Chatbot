@@ -22,7 +22,7 @@ ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageA
             logic_adapters=[{
             'import_path': 'chatterbot.logic.BestMatch',
             'default_response': 'i honestly have no idea how to respond to that',
-            'maximum_similarity_threshold': 0.8
+            'maximum_similarity_threshold': 0.5
              },
              "chatterbot.logic.MathematicalEvaluation"])
 
