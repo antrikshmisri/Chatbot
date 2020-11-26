@@ -1,6 +1,10 @@
+
 # Ciara-Chatbot
 
 Ciara is a python based chatbot trained to respond to mathematical queries , sports queries and much more
+
+
+
 
 # How To Run 🏃‍
 
@@ -19,3 +23,4 @@ To run the chatbot in a local environment run the following command:-
 ## Run in Local Environment
     // Some comments
     python app.py
+
