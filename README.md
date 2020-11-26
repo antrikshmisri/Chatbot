@@ -24,4 +24,4 @@ To run the chatbot in a local environment run the following command:-
     // Some comments
     python app.py
 
-# [pica](http://ciara-chatbot.herokuapp.com/)
+# [Chat With Ciara](http://ciara-chatbot.herokuapp.com/)
