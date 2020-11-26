@@ -24,6 +24,7 @@ def inputdata():
             else:
                 answerindex+=1
             q = input.tokenize(pattern)
+            print(answerindex)
             a = input.tokenize(intent['responses'][answerindex])
             for word in q:
                 if word in ignore_words:

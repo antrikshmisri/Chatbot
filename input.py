@@ -12,3 +12,5 @@ def tokenize(sentence):
 stemmer = PorterStemmer()
 def stem(words):
     return stemmer.stem(words.lower())
+
+

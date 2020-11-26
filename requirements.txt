@@ -1,62 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-ChatterBot==1.0.4
-=======
 certifi==2020.6.20
 ChatterBot==1.0.0
->>>>>>> 83eebd3... feat: Implemented Bootstrap v4.0
-=======
-certifi==2020.6.20
-ChatterBot==1.0.0
->>>>>>> 6ca062d91f7781fdb8e001fed268fbf44bc4bf5b
 chatterbot-corpus==1.2.0
 click==7.1.2
 Cython==0.29.21
 Flask==1.1.2
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 gunicorn==20.0.4
->>>>>>> 83eebd3... feat: Implemented Bootstrap v4.0
-=======
-gunicorn==20.0.4
->>>>>>> 6ca062d91f7781fdb8e001fed268fbf44bc4bf5b
 itsdangerous==1.1.0
 Jinja2==2.11.2
 joblib==0.16.0
 MarkupSafe==1.1.1
 mathparse==0.1.2
 nltk==3.5
-<<<<<<< HEAD
-<<<<<<< HEAD
-numpy==1.19.2
-packaging==20.4
-Pint==0.16.1
-=======
-=======
->>>>>>> 6ca062d91f7781fdb8e001fed268fbf44bc4bf5b
 packaging==20.4
 paho-mqtt==1.5.0
 Pint==0.16.1
 pipenv==2020.8.13
-<<<<<<< HEAD
->>>>>>> 83eebd3... feat: Implemented Bootstrap v4.0
-=======
->>>>>>> 6ca062d91f7781fdb8e001fed268fbf44bc4bf5b
 pymongo==3.11.0
 pyparsing==2.4.7
 python-dateutil==2.7.5
 pytz==2020.1
 PyYAML==3.13
 regex==2020.9.27
-<<<<<<< HEAD
-<<<<<<< HEAD
-six==1.15.0
-SQLAlchemy==1.2.19
-tqdm==4.50.0
-=======
-=======
->>>>>>> 6ca062d91f7781fdb8e001fed268fbf44bc4bf5b
 selenium==3.141.0
 six==1.15.0
 SpeechRecognition==3.8.1
@@ -66,8 +30,4 @@ urllib3==1.25.10
 virtualenv==16.7.9
 virtualenv-clone==0.5.4
 virtualenvwrapper-win==1.2.5
-<<<<<<< HEAD
->>>>>>> 83eebd3... feat: Implemented Bootstrap v4.0
-=======
->>>>>>> 6ca062d91f7781fdb8e001fed268fbf44bc4bf5b
 Werkzeug==1.0.1
