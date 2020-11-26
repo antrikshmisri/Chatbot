@@ -1,16 +1,14 @@
 body
 {
+	/*background: #A84136;*/
+	/*#f05842*/
 	background: linear-gradient(to bottom right, #db344a , #ed7f40);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
 	background-attachment: fixed;
 	margin: 0;
-}
-img.assistant
-{
-	width: 100%;
-	max-width: 30px;
+
 }
 
 #heading h1
@@ -30,7 +28,7 @@ img.assistant
 
 #textInput
 {
-	
+
 	width: 100%;
 	max-width: 400px;
 	text-decoration: none;
@@ -66,7 +64,7 @@ img.assistant
 
 #chatbox
 {
-
+	/*background-color: #BFFF00;*/
 	border-style: ridge;
 	border: 3px;
 	padding-top: 10px;
@@ -81,15 +79,18 @@ img.assistant
 .botText
 {
 	animation: type 1s;
+	/*overflow: hidden;*/
 	background-color: #db344a;
 	border-radius: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 10px;
 	padding-right: 7px;
+	/* margin-right: 300px; */
 	font-family: 'Satisfy', cursive;
 	font-weight: bold;
 	text-align: left;
+	/* margin-left: 15px; */
 	font-size: x-large;
 	text-shadow: 2.5px 2px 3px rgba(100, 100, 80, 1);
 	box-shadow: inset 5px 5px 5px rgba(30,30,30,0.1),inset -5px -8px  15px rgba(255 , 255 , 255,0.1) , 5px 5px 15px rgba(0,0,0,0.8), -5px -5px 15px rgba(255,255,255,0.2);
@@ -97,13 +98,17 @@ img.assistant
 }
 .userText
 {
-
 	animation: type 1s;
+	/*overflow: hidden;*/
 	background-color: #db344a;
 	border-radius: 20px;
     font-family: 'Satisfy', cursive;
 	font-weight: bold;
-	padding: 5px 20px;
+	/* margin-left: 300px;
+	margin-right: 15px; */
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	font-size: x-large;
 	box-shadow: inset 5px 5px 5px rgba(30,30,30,0.1),inset -5px -8px  15px rgba(255 , 255 , 255,0.1) , 5px 5px 15px rgba(0,0,0,0.8), -5px -5px 15px rgba(255,255,255,0.2);
 	text-shadow: 2.5px 2px 3px rgba(100, 100, 80, 1);
@@ -118,7 +123,7 @@ img.assistant
 		color: rgba(0,0,0,0);
 		text-shadow: 2.5px 2px 3px rgba(100, 100, 80, 0);
 		overflow: hidden;
-		
+
 	}
 	90%
 	{
@@ -134,7 +139,7 @@ img.assistant
 		color: rgba(0,0,0,1);
 		text-shadow: 2.5px 2px 3px rgba(100, 100, 80, 1);
 		overflow: visible;
-		
+
 	}
 
 }
