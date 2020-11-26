@@ -23,8 +23,8 @@ def inputdata():
                 answerindex=0
             else:
                 answerindex+=1
-            q = input.tokenize(pattern)
-            a = input.tokenize(intent['responses'][answerindex])
+            q = input.tokenize(pattern.lower())
+            a = input.tokenize(intent['responses'][answerindex].lower())
             for word in q:
                 if word in ignore_words:
                     q.remove(word)
