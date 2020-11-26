@@ -16,10 +16,18 @@ with open('intents.json','r') as f:
 statements = []
 ignore_words = ['.', ',', '?', '!']
 def inputdata():
+    answerindex = 0
     for intent in intents['intents']:
-        for pattern,response in zip(intent['patterns'] , intent['responses']):
+        for pattern in intent['patterns']:
+            if(answerindex >= len(intent['responses'])-1):
+                answerindex=0
+            else:
+                answerindex+=1
             q = input.tokenize(pattern)
-            a = input.tokenize(response)
+            print(answerindex)
+            a = input.tokenize(intent['responses'][answerindex])
+            print(q)
+            print(a)
             for word in q:
                 if word in ignore_words:
                     q.remove(word)
@@ -29,6 +37,7 @@ def inputdata():
             statements.append(ToString(q))
             statements.append(ToString(a))
     return statements
+print(inputdata())
 #hyperparameters
 iter = 10
 def trainbot(chatbot,iter):
