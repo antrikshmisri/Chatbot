@@ -1,6 +1,7 @@
 import json
 import input
 from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import UbuntuCorpusTrainer
 
 def ToString(s):
     # initialize an empty string
@@ -37,15 +38,22 @@ def inputdata():
 
 #hyperparameters
 iter = 10
-def trainbot(chatbot,iter):
+def trainbotbylist(chatbot,iter):
     if(iter == 0):
         return "Sucessfully Trained Chatbot"
     iter -= 1
     trainer = ListTrainer(chatbot)
     trainer.train(inputdata())
     print("training the chatbot , iteration No:-" + str(iter))
-    trainbot(chatbot , iter)
-
+    trainbotbylist(chatbot , iter)
+def trainbotbyubuntu(chatbot,iter):
+    if(iter == 0):
+        return "Sucessfully Trained Chatbot"
+    iter -= 1
+    trainer = UbuntuCorpusTrainer(chatbot)
+    trainer.train()
+    print("training the chatbot , iteration No:-" + str(iter))
+    trainbotbylist(chatbot , iter)
 
 
 
