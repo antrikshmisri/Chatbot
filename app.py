@@ -15,7 +15,7 @@ import train
 app = Flask(__name__)
 
 
-logging.basicConfig(level=logging.INFO)
+
 ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageAdapter", preprocessors=['chatterbot.preprocessors.clean_whitespace'],
             logic_adapters=[{
             'import_path': 'chatterbot.logic.BestMatch',
