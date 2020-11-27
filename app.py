@@ -25,7 +25,7 @@ ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageA
              "chatterbot.logic.MathematicalEvaluation"])
 
 train.trainbotbylist(ciara_bot,10)
-train.trainbotbyubuntu(ciara_bot,1)
+
 
 
 
