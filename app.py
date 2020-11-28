@@ -14,13 +14,13 @@ import train
 
 app = Flask(__name__)
 
-
+logging.basicConfig(level=logging.INFO)
 
 ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageAdapter", preprocessors=['chatterbot.preprocessors.clean_whitespace'],
             logic_adapters=[{
             'import_path': 'chatterbot.logic.BestMatch',
             'default_response': 'Sorry, I dont understand',
-            'maximum_similarity_threshold': 0.8
+            'maximum_similarity_threshold': 0.5 
              }])
 
 train.trainbotbylist(ciara_bot,10)
