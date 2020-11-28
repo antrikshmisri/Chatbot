@@ -20,10 +20,10 @@ ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageA
             logic_adapters=[{
             'import_path': 'chatterbot.logic.BestMatch',
             'default_response': 'Sorry, I dont understand',
-            'maximum_similarity_threshold': 0.5 
+            'maximum_similarity_threshold': 0.5
              }])
 
-train.trainbotbylist(ciara_bot,10)
+train.trainbotbylist(ciara_bot,1)
 
 
 
