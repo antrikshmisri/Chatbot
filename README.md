@@ -1,7 +1,7 @@
 
 # Ciara-Chatbot
 
-Ciara is a python based chatbot trained to respond to mathematical queries , sports queries and much more
+Ciara is a python based chatbot trained to respond to technical queries , hardware/software queries and much more , it is trained using ubuntu corpus
 
 
 
