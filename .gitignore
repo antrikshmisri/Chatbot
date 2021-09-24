@@ -2,3 +2,6 @@ venv/
 dataset1.json
 db.sqlite3
 
+__pycache__/
+.idea
+.vscode
