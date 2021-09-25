@@ -1,12 +1,14 @@
+import os
+import sys
 from flask import Flask, render_template, request
+from chatterbot.comparisons import LevenshteinDistance
 from chatterbot import ChatBot
 from chatterbot.conversation import Statement
 
-import chatterbot
 import logging
 
-
 import train
+from reset import reset_instance
 
 
 app = Flask(__name__)
@@ -17,10 +19,8 @@ ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageA
                     logic_adapters=[{
                         'import_path': 'chatterbot.logic.BestMatch',
                         'default_response': 'Sorry, I dont understand',
-                        'maximum_similarity_threshold': 0.5
+                        'threshold': 0.28,
                     }])
-
-train.trainbotbylist(ciara_bot, 1)
 
 
 @app.route("/")
@@ -32,15 +32,21 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = Statement(request.args.get('msg'))
-    if(userText == "i am antriksh"):
-        return str("Hi! Antriksh")
-    elif(userText == 'who made you' or userText == 'who is your father'):
-        return str('A guy named Antriksh made me')
-    else:
-        print(ciara_bot.get_response(userText))
-        response = str(ciara_bot.get_response(userText))
-        return response
+
+    print(ciara_bot.get_response(userText))
+    response = str(ciara_bot.get_response(userText))
+    return response
 
 
 if __name__ == '__main__':
-    app.run()
+    if len(sys.argv) > 2 and sys.argv[1] == '--train':
+        datasets = sys.argv[2:]
+
+        reset_instance(ciara_bot)
+        for dataset in datasets:
+            if not  os.path.isfile(dataset):
+                raise ValueError(f'{dataset} is not a valid file. Check its path.')
+
+            train.trainbotbylist(ciara_bot, dataset)
+
+    app.run(debug=True)
