@@ -20,7 +20,7 @@ ciara_bot = ChatBot("ciara bot", storage_adapter="chatterbot.storage.SQLStorageA
                         'import_path': 'chatterbot.logic.BestMatch',
                         'default_response': 'Sorry, I dont understand',
                         'threshold': 0.28,
-                    }])
+                    }], read_only=True)
 
 
 @app.route("/")
@@ -42,7 +42,9 @@ if __name__ == '__main__':
     if len(sys.argv) > 2 and sys.argv[1] == '--train':
         dataset = sys.argv[2]
 
-        reset_instance(ciara_bot)
+        if len(sys.argv) > 3 and sys.argv[3] == '--reset':
+            reset_instance(ciara_bot)
+
         if not  os.path.isfile(dataset):
             raise ValueError(f'{dataset} is not a valid file. Check its path.')
 
