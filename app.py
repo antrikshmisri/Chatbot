@@ -40,13 +40,12 @@ def get_bot_response():
 
 if __name__ == '__main__':
     if len(sys.argv) > 2 and sys.argv[1] == '--train':
-        datasets = sys.argv[2:]
+        dataset = sys.argv[2]
 
         reset_instance(ciara_bot)
-        for dataset in datasets:
-            if not  os.path.isfile(dataset):
-                raise ValueError(f'{dataset} is not a valid file. Check its path.')
+        if not  os.path.isfile(dataset):
+            raise ValueError(f'{dataset} is not a valid file. Check its path.')
 
-            train.trainbotbylist(ciara_bot, dataset)
+        train.trainbotbylist(ciara_bot, dataset)
 
     app.run(debug=True)
