@@ -24,4 +24,4 @@ To run the chatbot in a local environment run the following command:-
 
     python app.py
 
-# [Chat With Ciara](http://ciara-chatbot.herokuapp.com/)
+# [Chat With Ciara](http://chatbot.antriksh.live/)
